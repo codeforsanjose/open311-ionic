@@ -10,11 +10,12 @@ function($scope, $ionicHistory, $ionicPlatform, API, NewRequest) {
     });
   });
 
-  $scope.selectItem = function (catName) {
+  $scope.selectItem = function (category) {
     var requestObj = NewRequest.get();
-    requestObj.category = catName;
+    requestObj.category = category;
     NewRequest.set(requestObj);
 
     $ionicHistory.goBack();
   }
+
 }]);
