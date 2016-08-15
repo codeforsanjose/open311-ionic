@@ -91,6 +91,8 @@ function ($scope, $state, $cordovaCamera, $ionicModal, $cordovaGeolocation) {
     $cordovaCamera.getPicture(options).then(function (imageData) {
       $scope.caseImage = "data:image/jpeg;base64," + imageData;
     });
+
+    $scope.model.hide();
   };
   
   var options = {timeout: 10000, enableHighAccuracy: true};
